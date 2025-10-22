@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/projet_css.css">
+    <title>Projet</title>
+</head>
+<body>
+ <div>
+    <h3 class="introduction"> <b> Bienvenue sur le site du pays de Belgique</h3></b>
+    <img src="img/logoBelgique.png" class="logoBelgique">
+   <p> <h3 class="ParagBelgique"> La Belgique est un pays de l'Europe de l'Ouest réputé 
+    pour ses villes médiévales, son architecture Renaissance et pour accueillir le 
+    siège de l'Union européenne et de l'OTAN. Le pays comprend des régions distinctes, 
+    notamment la Flandre néerlandophone au nord, la Wallonie francophone au sud et une communauté
+       germanophone à l'est. Bruxelles</h3>
+    </p>  
+    <ul class="menu">
+        <a href="index_projet.html"><li>Accueil</li></a>
+        <a href="#" target="_blank"><li>Plan de site</li></a>
+        <li onclick="fonct1()">Qui somme-nous ?</li>
+        <li onclick="fonct2()">Contact</li>
+    </ul> <br>  <br> <br> <br> <br> <br> <br>
+    <ul id="menu_Site">
+      <li><h2 onclick="site1()" id="menu_Site">Sites et Monuments</h2></li> <br> <br>
+      <li><h2 onclick="site2()" id="menu_Site">Index des villes</h2></li> <br> <br>
+      <li><h2 onclick="site4()" id="menu_Site">Google map</h2></li> <br> <br>
+      <li><h2 onclick="site3()" id="menu_Site">Liens utiles</h2></li> <br> <br>
+  </ul> <br>  <br> 
+</div> 
+
+<div id="imageCenter" >
+<div id="image_center">
+   <a href="https://fr.hotels.com/go/belgique" target="_blank" ><img src="img/photo1.jpg" alt=""></a> 
+</div>
+<div id="video_droite" >
+    <video src="img/video_belgique.mp4" id="idVideo" controls></video>
+</div> 
+</div>
+  <br> <br> <br>
+  <div id="idPied_padding"></div>
+
+<ul class="menu_pied">
+        <a href="https://www.dhnet.be/" target="_blank"><li>Suggestions</li></a>
+        <a href="#" target="_blank"><li>Condition d’utilisation</li></a> <br> <br> <br> <br> <br>
+        <li id="menu_pied_copy"><b>Copyright xxxxx 2018 - 2022</b></li> 
+</ul>
+<br> <br> <br> <br> <br> <br> <br>
+
+<iframe src="Partie_dnamique/index_principale.php"  style="display: none; width: 969px; height: 1000px; position: absolute; display: flex; left: 100px; top:800px;" > </iframe>
+
+<script>
+  function site1() {
+    document.getElementById("idPied_padding").innerHTML='<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>' ;
+    var a=document.getElementById("imageCenter")
+      a.innerHTML='<iframe src="site_monument.html"  style="display: none; width: 969px; height: 1000px; position: absolute; display: flex; left: 290px; top: 170px;" > </iframe>'
+  }
+  function site2() {
+    document.getElementById("idPied_padding").innerHTML='<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>' ;
+    var a=document.getElementById("imageCenter")
+      a.innerHTML='<iframe src="index_ville.html"  style="display: none; width: 969px; height: 1260px; position: absolute; display: flex; left: 290px; top: 170px;" > </iframe>'
+  }
+  function site3() {
+    document.getElementById("idPied_padding").innerHTML='<br><br><br><br><br><br><br><br><br>' ;
+    var a=document.getElementById("imageCenter")
+       a.innerHTML='<iframe src="lien_utile.html"  style="display: none; width: 969px; height: 550px; position: absolute; display: flex; left: 290px; top: 170px;" > </iframe>'
+  }
+  function site4() {
+    document.getElementById("idPied_padding").innerHTML='<br><br><br><br><br><br><br><br><br>' ;
+    var a=document.getElementById("imageCenter")
+       a.innerHTML='<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2599680.2032323196!2d2.2227476!3d50.482994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17d64edf39797%3A0x47ebf2b439e60ff2!2sBelgique!5e0!3m2!1sfr!2sma!4v1669412688148!5m2!1sfr!2sma" style="display: none; width: 969px; height: 550px; position: absolute; display: flex; left: 290px; top: 170px;" > </iframe>'
+  }
+
+  function fonct1() {
+    document.getElementById("idPied_padding").innerHTML='<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>' ;
+    var a=document.getElementById("imageCenter")
+       a.innerHTML='<iframe src="nous_info.html"  style="display: none; width: 1025px; height: 580px; position: absolute; display: flex; left: 290px; top: 170px;" > </iframe>'
+  }
+  function fonct2() {
+    document.getElementById("idPied_padding").innerHTML='<br><br><br><br><br><br><br><br><br><br><br>' ;
+    var a=document.getElementById("imageCenter")
+       a.innerHTML='<iframe src="contact.html"  style="display: none; width: 1025px; height: 595px; position: absolute; display: flex; left: 290px; top: 170px;" > </iframe>'
+  }
+  </script>
+</body> 
+</html>

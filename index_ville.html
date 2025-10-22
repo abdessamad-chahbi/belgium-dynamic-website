@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>indexes des villes</title>	
+</head>
+<body>
+    <center style="color:azure;"><h1><b>TABLE CITY</b></h1></center>
+    <table >
+        <thead>
+        <tr><th>Nom de Ville</th> 
+            <th>Province</th> 
+            <th>Population</th> </tr>
+        </thead>
+        <tbody>
+         <tr>
+            <td><b>Ans</b></td> 
+            <td><b>Province de Liège</b></td>
+            <td><b>28 500</b></td>
+         </tr>
+     <tr>
+        <td><b>Andenne</b></td> 
+        <td><b>Province de Namur</b></td>
+        <td><b>27 375</b></td>
+    </tr>
+   </tbody>
+    </table>
+    <style>
+        table{
+            
+            border-collapse:collapse;
+            min-width: 400px;
+            width:900px;
+            height:200px;
+            box-shadow: 0 5px 50px rgba(0,0,0,0,15);
+            cursor:pointer;
+            margin:100px auto;
+            border:2px solid midnightblue;
+        }
+        thead tr{
+            background-color: rgb(40, 40, 75);
+            color:aliceblue;
+            text-align:left;
+            font-size: large;
+        }
+        th, td{
+            padding: 30px 90px;
+            color: wheat;
+            font-size: large;
+        }
+        tbody tr, td, th{
+            border: 5px solid rgb(224, 208, 208);
+        }
+    </style>
+    <input type="radio" name="photo" id="check0" checked>
+    <input type="radio" name="photo" id="check1">
+    <input type="radio" name="photo" id="check2">
+    <input type="radio" name="photo" id="check3">
+
+    <div class="container">
+        <center style="color:azure;"><h1><b>ALL PHOTOS</b></h1></center>
+        <div class="top-content">
+        <h3 style="color: black;"><b>Photo Gallery</b></h3>
+        <label for="check0"><b>ALL PHOTOS</b></label>
+        <label for="check1"><b>ANDENNE</b></label>
+        <label for="check2"><b>ANS</b></label>
+        <label for="check3"><b></b></label>
+     </div>
+     <div class="photos-gallery">
+        <div class="pic Andenne">
+            <img src="img/ville1_photo1.jpg">
+            </div>
+                <div class="pic Ans">
+                    <img src="img/ville2_photo1.jpg">
+                    </div>                  
+                    <div class="pic Andenne">
+                        <img src="img/ville1_photo2.jpg">
+                        </div>
+                            <div class="pic Ans">
+                                <img src="img/ville2_photo2.jpg">
+                                </div>
+                                <div class="pic Andenne">
+                                    <img src="img/ville1_photo3.jpg">
+                                    </div>
+                                    
+     </div>
+    </div>    
+     <style>
+      *{
+        margin:0;
+        padding: 0;
+        box-sizing:border-box;
+        font-family: sans-serif;
+      }
+      body{
+         background: #16222A; 
+         background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+         background: linear-gradient(to right, #3A6073, #16222A); 
+}
+      input{
+        display:none;
+      }
+      .container{
+        width:100%;
+        text-align: center;
+      }
+      h1{
+        font-weight: normal;
+        font-size: 35px;
+        position:relative;
+        margin:40px 0;
+      }
+      h1::before{
+        content:'';
+        position:absolute;
+        width: 100px;
+        height: 3px;
+        background-color: chartreuse ;
+        bottom:-10px;
+        left:50%;
+        transform:translateX(-50%);
+          animation:animate 4s linear infinite;}
+     @keyframes animate{   /* pour le movment de la ligne rouge sous all photos */
+   0%{
+    width:100px;
+   }
+   50%{
+    width:200px;
+   }
+   100%{
+    width:100px;
+   }
+  }  
+.top-content{
+    background-color: aliceblue;
+    width:90%;
+    margin: 0 auto 20px auto;
+    height:60px;
+    display:flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+h3{
+height:100%;
+background-color:rgb(221, 221, 221) ;
+line-height: 60px;
+padding:0 50px;
+color:white;
+}
+label{
+    display: inline-block;
+    height:100%;
+    margin:0 20px;
+    line-height:60px;
+    font-size:18px;
+    color:gray;
+    cursor:pointer;
+    transition:color.5s;
+}
+label:hover{
+    color:black;
+}
+.photos-gallery{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+}
+.pic{
+    position:relative;
+    height:230px;
+}
+.pic img{
+    width:100%;
+    height:100%;
+    border-radius:10px ;
+}
+#check0:checked ~ .container .photos-gallery .pic{
+    opacity: 1;
+    transform:scale(1);
+    position:relative;
+}
+#check1:checked ~ .container .photos-gallery  .Andenne{
+    transform:scale(0);
+    opacity: 0;
+    position:absolute;
+}
+#check2:checked ~ .container .photos-gallery .Ans{
+     opacity: 0;
+     transform:scale(0);
+    position:absolute;
+}
+    </style>
+
+</body>
+</html>
